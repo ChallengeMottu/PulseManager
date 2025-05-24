@@ -61,6 +61,7 @@ Essa API é um componente essencial do ecossistema Pulse, garantindo que apenas 
 | GET    | `/api/login/{id}`       | Busca login do usuário pelo ID               |
 | PUT    | `/api/login/{id}/senha` | Atualiza senha do usuário                     |
 | DELETE | `/api/login/{id}`       | Deleta login pelo ID                          |
+| POST   | `{id}/desbloquear`      | Desbloqueia o login pelo ID                   |
 
 
 

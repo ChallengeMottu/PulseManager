@@ -1,0 +1,6 @@
+@PulseManager_HostAddress = http://localhost:5157
+
+GET {{PulseManager_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

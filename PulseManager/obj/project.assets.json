@@ -3889,23 +3889,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gabis\\.nuget\\packages\\": {},
+    "C:\\Users\\Raphael\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabis\\Source\\Repos\\PulseManagerMVP\\PulseManager\\PulseManager.csproj",
+      "projectUniqueName": "F:\\Fiap2025\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\Nova pasta\\PulseManager\\PulseManager.csproj",
       "projectName": "PulseManager",
-      "projectPath": "C:\\Users\\gabis\\Source\\Repos\\PulseManagerMVP\\PulseManager\\PulseManager.csproj",
-      "packagesPath": "C:\\Users\\gabis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabis\\Source\\Repos\\PulseManagerMVP\\PulseManager\\obj\\",
+      "projectPath": "F:\\Fiap2025\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\Nova pasta\\PulseManager\\PulseManager.csproj",
+      "packagesPath": "C:\\Users\\Raphael\\.nuget\\packages\\",
+      "outputPath": "F:\\Fiap2025\\ADVANCED BUSINESS DEVELOPMENT WITH .NET\\Nova pasta\\PulseManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\gabis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Raphael\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

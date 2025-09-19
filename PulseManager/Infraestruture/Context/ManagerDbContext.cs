@@ -4,17 +4,21 @@ using PulseManager.Infraestruture.Mapping;
 
 namespace PulseManager.Infraestruture.Context
 {
-    public class ManagerDbContext(DbContextOptions<ManagerDbContext> options): DbContext(options)
-
+    public class ManagerDbContext : DbContext
     {
+        public ManagerDbContext(DbContextOptions<ManagerDbContext> options) : base(options) { }
 
-        public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Login> Logins { get; set; }
+        // Novas entidades
+        public DbSet<Patio> Patios { get; set; }
+        public DbSet<Zona> Zonas { get; set; }
+        public DbSet<Gateway> Gateways { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new UsuarioMapping());
-            modelBuilder.ApplyConfiguration(new LoginMapping());
+            // Aplica os novos mapeamentos
+            modelBuilder.ApplyConfiguration(new PatioMapping());
+            modelBuilder.ApplyConfiguration(new ZonaMapping());
+            modelBuilder.ApplyConfiguration(new GatewayMapping());
         }
     }
 }

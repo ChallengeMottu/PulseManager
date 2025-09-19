@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PulseManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d5e8cdda42f72912fe27fdbc85857f6e3b66601")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51e141e07ec906b51397bc991b512999420bd050")]
 [assembly: System.Reflection.AssemblyProductAttribute("PulseManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PulseManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

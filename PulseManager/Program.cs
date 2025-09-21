@@ -1,15 +1,7 @@
-
 using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using PulseManager.Application.Service.Implementation;
-using PulseManager.Application.Service.Interfaces;
-using PulseManager.Domain.Entities;
 using PulseManager.Infraestruture.Context;
-using PulseManager.Infraestruture.Mapping;
-using PulseManager.Infraestruture.Repositories.Implementation;
-using PulseManager.Infraestruture.Repositories.Interface;
-
 
 namespace PulseManager
 {
@@ -19,15 +11,20 @@ namespace PulseManager
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            
-            
+            // Add services to the container.
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                });
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(swagger =>
             {
                 swagger.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "Pulse Registration Manager",
-                    Description = "API de Gerenciamento e Controle de Cadastro de Colaboradores na interface Pulse",
+                    Title = "Pulse Manager - Mottu Challenge",
+                    Description = "API de Gerenciamento de Pátios, Zonas e Gateways para o desafio Mottu",
                     Contact = new OpenApiContact()
                     {
                         Name = "Pulse Manager System"
@@ -36,30 +33,15 @@ namespace PulseManager
                 swagger.EnableAnnotations();
             });
 
+            // Configuração do Banco de Dados Oracle
             builder.Services.AddDbContext<ManagerDbContext>(options =>
             {
                 options.UseOracle(builder.Configuration.GetConnectionString("Oracle"));
             });
 
-            builder.Services.AddControllers()
-                .AddJsonOptions(options =>
-                {
-                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-                });
-
-
-            builder.Services.AddAutoMapper(typeof(MappingConfig));
-            builder.Services.AddScoped<IMethodsRepository<Usuario>, UsuarioRepository>();
-            builder.Services.AddScoped<IMethodsRepository<Login>, LoginRepository>();
-            builder.Services.AddScoped<ILoginRepository, LoginRepository>();
-
-            builder.Services.AddScoped<IUsuarioService, CadastroService>();
-            builder.Services.AddScoped<ILoginService, LoginService>();
-
-
             var app = builder.Build();
 
-            
+            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -67,12 +49,8 @@ namespace PulseManager
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
         }
     }

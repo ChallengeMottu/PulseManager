@@ -23,4 +23,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Infraestruture\Mapping\UsuarioMapping.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Service\Implementation\" />
+  </ItemGroup>
+
 </Project>

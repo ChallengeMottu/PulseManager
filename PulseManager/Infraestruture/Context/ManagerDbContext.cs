@@ -7,8 +7,7 @@ namespace PulseManager.Infraestruture.Context
     public class ManagerDbContext : DbContext
     {
         public ManagerDbContext(DbContextOptions<ManagerDbContext> options) : base(options) { }
-
-        // Novas entidades
+        
         public DbSet<Patio> Patios { get; set; }
         public DbSet<Zona> Zonas { get; set; }
         public DbSet<Gateway> Gateways { get; set; }

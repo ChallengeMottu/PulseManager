@@ -27,8 +27,4 @@
     <Compile Remove="Infraestruture\Mapping\UsuarioMapping.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Application\Service\Implementation\" />
-  </ItemGroup>
-
 </Project>

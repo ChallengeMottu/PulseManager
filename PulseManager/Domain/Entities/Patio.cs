@@ -1,4 +1,4 @@
-﻿namespace PulseManager.Models
+﻿namespace PulseManager.Domain.Entities
 {
     public class Patio
     {
